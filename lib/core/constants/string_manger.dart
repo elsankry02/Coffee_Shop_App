@@ -1,1 +1,3 @@
-class StringManger {}
+class StringManger {
+  static const kSoraFont = 'sora';
+}
