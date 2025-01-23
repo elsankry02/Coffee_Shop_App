@@ -1,1 +1,9 @@
-class ImageManger {}
+class ImageManger {
+  static const kBanner = 'assets/image/Banner.png';
+  static const kCoffee1 = 'assets/image/Coffee1.png';
+  static const kCoffee2 = 'assets/image/Coffee2.png';
+  static const kCoffee3 = 'assets/image/Coffee3.png';
+  static const kCoffee4 = 'assets/image/Coffee4.png';
+  static const kCoffee5 = 'assets/image/Coffee5.png';
+  static const kOnBoardingImage = 'assets/image/OnBoardingImage.png';
+}
