@@ -6,4 +6,5 @@ class ColorManger {
   static const k3 = Color(0xff313131);
   static const k4 = Color(0xffE3E3E3);
   static const k5 = Color(0xffF9F2ED);
+  static const k6 = Color(0xffa0a0a0);
 }
