@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/home/pages/home_page/home_page.dart';
-import 'package:coffee_shop/home/pages/onboarding_page/onboarding_page.dart';
-import 'package:coffee_shop/home/pages/splash_page/splash_page.dart';
+import 'package:coffee_shop/pages/home/home_page.dart';
+import 'package:coffee_shop/pages/onboarding_page/onboarding_page.dart';
+import 'package:coffee_shop/pages/splash_page/splash_page.dart';
 
 part 'router.gr.dart';
 
