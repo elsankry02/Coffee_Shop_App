@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:coffee_shop/core/components/custom_button.dart';
 import 'package:coffee_shop/core/constants/color_manger.dart';
 import 'package:coffee_shop/core/router/router.dart';
-import 'package:coffee_shop/data/models/onboarding_model.dart';
+import 'package:coffee_shop/features/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -56,10 +56,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
               InkWell(
                 borderRadius: BorderRadius.circular(16),
                 onTap: () {
-                  context.router.push(HomeRoute());
+                  context.router.push(NavBarRoute());
                 },
                 //! Custtom Button
-                child: CustomButton(index: index, h: h, textTheme: textTheme),
+                child: CustomButton(
+                  index: index,
+                  h: h,
+                  textTheme: textTheme,
+                ),
               ),
             ],
           );

@@ -27,6 +27,22 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [NavBarPage]
+class NavBarRoute extends PageRouteInfo<void> {
+  const NavBarRoute({List<PageRouteInfo>? children})
+    : super(NavBarRoute.name, initialChildren: children);
+
+  static const String name = 'NavBarRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const NavBarPage();
+    },
+  );
+}
+
+/// generated route for
 /// [OnboardingPage]
 class OnboardingRoute extends PageRouteInfo<void> {
   const OnboardingRoute({List<PageRouteInfo>? children})

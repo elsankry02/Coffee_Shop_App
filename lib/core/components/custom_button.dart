@@ -1,5 +1,5 @@
 import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/data/models/onboarding_model.dart';
+import 'package:coffee_shop/features/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
       height: h * 0.060,
       decoration: BoxDecoration(
           borderRadius: BorderRadiusDirectional.circular(16),
-          color: ColorManger.k1),
+          color: ColorManger.kMaterialColor),
       child: Center(
         child: Text(
           //! Container Text

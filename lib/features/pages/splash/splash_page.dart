@@ -25,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   splashCoffeeShopFunc() {
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 2), () {
       context.router.replace(OnboardingRoute());
     });
   }
