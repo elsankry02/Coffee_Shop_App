@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.17
+  persistent_bottom_nav_bar: ^6.2.1
   shared_preferences: ^2.3.5
 
 dev_dependencies:
