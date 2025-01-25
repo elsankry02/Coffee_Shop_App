@@ -14,7 +14,7 @@ class CoffeeShop extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router.config(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: kSoraFont),
+      theme: ThemeData(fontFamily: kSora),
     );
   }
 }

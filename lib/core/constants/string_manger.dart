@@ -1,1 +1,1 @@
-const kSoraFont = 'Sora';
+const kSora = 'Sora';

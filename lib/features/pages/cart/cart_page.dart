@@ -1,3 +1,4 @@
+import 'package:coffee_shop/core/constants/image_manger.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
@@ -5,9 +6,13 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('cart'),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(ImageManger.kSingle),
+        ],
       ),
     );
   }

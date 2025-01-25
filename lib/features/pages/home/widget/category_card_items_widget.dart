@@ -24,9 +24,7 @@ class CategoryCardItemsWidget extends StatelessWidget {
           //! object Model
           final model = cardModel[index];
           return GestureDetector(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Container(
               decoration: BoxDecoration(),
               child: Card(
@@ -51,7 +49,8 @@ class CategoryCardItemsWidget extends StatelessWidget {
                       //! titel
                       Text(
                         model.titel,
-                        style: textTheme.titleMedium,
+                        style: textTheme.titleMedium!
+                            .copyWith(fontWeight: FontWeight.w600),
                         overflow: TextOverflow.ellipsis,
                       ),
                       //! subTitel
@@ -67,7 +66,9 @@ class CategoryCardItemsWidget extends StatelessWidget {
                         children: [
                           //! price
                           Text("\$ ${model.price}",
-                              style: textTheme.titleMedium),
+                              style: textTheme.titleMedium!.copyWith(
+                                fontWeight: FontWeight.w600,
+                              )),
                           //! on tap
                           GestureDetector(
                             onTap: () {},

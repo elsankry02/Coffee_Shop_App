@@ -25,7 +25,8 @@ class CustomButton extends StatelessWidget {
         child: Text(
           //! Container Text
           onboardingModelFunc()[index].containerText,
-          style: textTheme.labelMedium!.copyWith(color: Colors.white),
+          style: textTheme.labelMedium!
+              .copyWith(fontWeight: FontWeight.w600, color: Colors.white),
         ),
       ),
     );

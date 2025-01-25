@@ -37,9 +37,11 @@ class _CategoryItemsWidgetState extends State<CategoryItemsWidget> {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Center(
+                //! Titel
                 child: Text(
                   category[index],
                   style: textTeme.labelLarge!.copyWith(
+                      fontWeight: FontWeight.w600,
                       color: currantIndex == index
                           ? Colors.white
                           : ColorManger.k3),

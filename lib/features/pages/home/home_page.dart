@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                 //! Category Items Widget
                 CategoryItemsWidget(),
                 SizedBox(height: h * 0.020),
-                //! Category Image Items Widget
+                //! Category Card Items Widget
                 CategoryCardItemsWidget()
               ],
             ),

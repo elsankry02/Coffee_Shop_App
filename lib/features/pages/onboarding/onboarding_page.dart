@@ -37,8 +37,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       child: Text(
                         textAlign: TextAlign.center,
                         onboardingModelFunc()[index].titel,
-                        style: textTheme.headlineLarge!
-                            .copyWith(color: Colors.white),
+                        style: textTheme.headlineLarge!.copyWith(
+                            fontWeight: FontWeight.w600, color: Colors.white),
                       ),
                     ),
                   ),
