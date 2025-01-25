@@ -24,7 +24,9 @@ class CategoryCardItemsWidget extends StatelessWidget {
           //! object Model
           final model = cardModel[index];
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              
+            },
             child: Container(
               decoration: BoxDecoration(),
               child: Card(
@@ -37,6 +39,7 @@ class CategoryCardItemsWidget extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(12),
+                            //! image
                             child: Image.asset(
                               cardModel[index].image,
                               fit: BoxFit.cover,
@@ -45,16 +48,44 @@ class CategoryCardItemsWidget extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: h * 0.010),
+                      //! titel
                       Text(
                         model.titel,
                         style: textTheme.titleMedium,
                         overflow: TextOverflow.ellipsis,
                       ),
+                      //! subTitel
                       Text(
                         model.subTitel,
                         style: textTheme.labelMedium!
                             .copyWith(color: ColorManger.k7),
                         overflow: TextOverflow.ellipsis,
+                      ),
+                      SizedBox(height: h * 0.005),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          //! price
+                          Text("\$ ${model.price}",
+                              style: textTheme.titleMedium),
+                          //! on tap
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              padding: EdgeInsetsDirectional.all(5),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: ColorManger.kMaterialColor),
+                              //! icon
+                              child: Center(
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

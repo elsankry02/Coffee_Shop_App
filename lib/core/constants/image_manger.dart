@@ -6,4 +6,6 @@ class ImageManger {
   static const kCoffee3 = 'assets/image/Coffee3.png';
   static const kCoffee4 = 'assets/image/Coffee4.png';
   static const kCoffee5 = 'assets/image/Coffee5.png';
+  static const kPuterUsers = 'assets/image/puter_users_flat_icons.png';
+  static const kSingle = 'assets/image/single.png';
 }
