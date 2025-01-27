@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           //! Back Ground Container Widget
           BackGroundContainerWidget(),
           Padding(
-            padding: const EdgeInsetsDirectional.only(top: 80),
+            padding: EdgeInsetsDirectional.only(top: h * 0.080),
             child: Column(
               children: [
                 //! Search And Filter AppBar

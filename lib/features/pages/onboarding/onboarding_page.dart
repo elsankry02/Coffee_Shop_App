@@ -31,7 +31,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 children: [
                   Image.asset(onboardingModelFunc()[index].image),
                   Padding(
-                    padding: EdgeInsetsDirectional.only(top: h * 0.680),
+                    padding: EdgeInsetsDirectional.only(top: h * 0.655),
                     child: Center(
                       //! titel
                       child: Text(
@@ -53,8 +53,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
               SizedBox(height: h * 0.020),
               //! Click
-              InkWell(
-                borderRadius: BorderRadius.circular(16),
+              GestureDetector(
                 onTap: () {
                   context.router.push(NavBarRoute());
                 },

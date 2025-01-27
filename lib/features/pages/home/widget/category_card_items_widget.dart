@@ -24,7 +24,11 @@ class CategoryCardItemsWidget extends StatelessWidget {
           //! object Model
           final model = cardModel[index];
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+       
+
+
+            },
             child: Container(
               decoration: BoxDecoration(),
               child: Card(
