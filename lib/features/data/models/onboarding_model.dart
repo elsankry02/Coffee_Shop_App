@@ -1,4 +1,6 @@
 import 'package:coffee_shop/core/constants/image_manger.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
+import 'package:flutter/material.dart';
 
 class OnboardingModel {
   final String image;
@@ -9,13 +11,14 @@ class OnboardingModel {
       {required this.image, required this.titel, required this.subTitel});
 }
 
-List<OnboardingModel> onboardingModelFunc() {
+List<OnboardingModel> onboardingModelFunc(BuildContext context) {
+  final local = AppLocalizations.of(context)!;
   return [
     OnboardingModel(
       image: ImageManger.kOnBoardingImage,
-      titel: 'Fall in Love with\n Coffee in Blissful\n Delight!',
+      titel: local.fallInLoveWithCoffeeInBlissfulDelight,
       subTitel:
-          'Welcome to our cozy coffee corner, where\n every cup is a delightful for you.',
+          local.welcomeToOurCozyCoffeeCornerwhereeverycupisADelightfulForYou,
     ),
   ];
 }

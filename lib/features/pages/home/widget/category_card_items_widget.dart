@@ -21,16 +21,16 @@ class CategoryCardItemsWidget extends StatelessWidget {
             crossAxisSpacing: 15,
             mainAxisSpacing: 15,
             mainAxisExtent: 270),
-        itemCount: cardModel.length,
+        itemCount: cardModel(context).length,
         itemBuilder: (context, index) {
           //! object Model
-          final model = cardModel[index];
+          final model = cardModel(context)[index];
           return GestureDetector(
             onTap: () {
               //! Push To Details Page
               context.router.push(
                 DetailsItemRoute(
-                  cardModel: cardModel[index],
+                  cardModel: model,
                 ),
               );
             },
@@ -46,7 +46,7 @@ class CategoryCardItemsWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                           //! image
                           child: Image.asset(
-                            cardModel[index].image,
+                            model.image,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -68,32 +68,35 @@ class CategoryCardItemsWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     SizedBox(height: h * 0.005),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //! price
-                        Text("\$ ${model.mediumPrice}",
-                            style: textTheme.titleMedium!.copyWith(
-                              fontWeight: FontWeight.w600,
-                            )),
-                        //! on tap
-                        GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            padding: EdgeInsetsDirectional.all(5),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: ColorManger.kMaterialColor),
-                            //! icon
-                            child: Center(
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
+                    Directionality(
+                      textDirection: TextDirection.ltr,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          //! price
+                          Text("\$ ${model.mediumPrice}",
+                              style: textTheme.titleMedium!.copyWith(
+                                fontWeight: FontWeight.w600,
+                              )),
+                          //! on tap
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              padding: EdgeInsetsDirectional.all(5),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: ColorManger.kMaterialColor),
+                              //! icon
+                              child: Center(
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),

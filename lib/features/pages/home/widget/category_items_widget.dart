@@ -1,4 +1,5 @@
 import 'package:coffee_shop/core/constants/color_manger.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItemsWidget extends StatefulWidget {
@@ -19,7 +20,7 @@ class _CategoryItemsWidgetState extends State<CategoryItemsWidget> {
       child: ListView.builder(
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 5),
         scrollDirection: Axis.horizontal,
-        itemCount: category.length,
+        itemCount: category(context).length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -39,7 +40,7 @@ class _CategoryItemsWidgetState extends State<CategoryItemsWidget> {
               child: Center(
                 //! Titel
                 child: Text(
-                  category[index],
+                  category(context)[index],
                   style: textTeme.labelLarge!.copyWith(
                       fontWeight: FontWeight.w600,
                       color: currantIndex == index
@@ -55,10 +56,13 @@ class _CategoryItemsWidgetState extends State<CategoryItemsWidget> {
   }
 }
 
-List<String> category = [
-  'All Coffee',
-  'Machiato',
-  'Latte',
-  'Americano',
-  'cappuccino'
-];
+List<String> category(BuildContext context) {
+  final local = AppLocalizations.of(context)!;
+  return [
+    local.allCoffee,
+    local.machiato,
+    local.latte,
+    local.americano,
+    local.cappuccino
+  ];
+}

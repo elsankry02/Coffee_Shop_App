@@ -7,6 +7,7 @@ import 'package:coffee_shop/features/pages/details/widget/descriptrion_widget.da
 import 'package:coffee_shop/features/pages/details/widget/details_image_widget.dart';
 import 'package:coffee_shop/features/pages/details/widget/rating_widget.dart';
 import 'package:coffee_shop/features/pages/details/widget/superiority_widget.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -21,15 +22,9 @@ class DetailsItemPage extends StatelessWidget {
     final w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: context.router.maybePop,
-          child: UnconstrainedBox(
-            child: SvgPicture.asset(SvgManger.kArrowLeft),
-          ),
-        ),
         //! AppBar Text
         title: Text(
-          'Detail',
+          AppLocalizations.of(context)!.detail,
           style: textTeme.titleMedium!.copyWith(fontWeight: FontWeight.w600),
         ),
         centerTitle: true,

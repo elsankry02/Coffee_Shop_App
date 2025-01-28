@@ -1,4 +1,5 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:coffee_shop/features/pages/change_language/change_lang_page.dart';
 import 'package:coffee_shop/features/pages/home/widget/back_ground_container_widget.dart';
 import 'package:coffee_shop/features/pages/home/widget/banner_image_widget.dart';
 import 'package:coffee_shop/features/pages/home/widget/category_card_items_widget.dart';
@@ -13,7 +14,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
-  
 
     return Scaffold(
       body: Stack(
@@ -21,12 +21,22 @@ class HomePage extends StatelessWidget {
           //! Back Ground Container Widget
           BackGroundContainerWidget(),
           Padding(
-            padding: EdgeInsetsDirectional.only(top: h * 0.080),
+            padding: EdgeInsetsDirectional.only(top: h * 0.040),
             child: Column(
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                //! Chage Language App
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: ChangeLangPage(),
+                  ),
+                ),
+                SizedBox(height: h * 0.030),
                 //! Search And Filter AppBar
                 SearchAndFilterWidget(),
-                SizedBox(height: h * 0.050),
+                SizedBox(height: h * 0.025),
                 //! Banner Image Widget
                 BannerImageWidget(),
                 SizedBox(height: h * 0.020),

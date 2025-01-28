@@ -26,39 +26,42 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: navPage.elementAt(currentIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedIconTheme: IconThemeData(color: ColorManger.kMaterialColor),
-        unselectedIconTheme: IconThemeData(color: ColorManger.k7),
-        showUnselectedLabels: false,
-        currentIndex: currentIndex,
-        onTap: (value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            label: '',
-            //! active
-            activeIcon: Icon(Icons.home_rounded),
-            //! Selected
-            icon: Icon(Icons.home_outlined),
-          ),
-          BottomNavigationBarItem(
-            label: '',
-            //! active
-            activeIcon: Icon(Icons.favorite),
-            //! Selected
-            icon: Icon(Icons.favorite_border_rounded),
-          ),
-          BottomNavigationBarItem(
-            label: '',
-            //! active
-            activeIcon: Icon(Icons.shopping_bag),
-            //! Selected
-            icon: Icon(Icons.shopping_bag_outlined),
-          ),
-        ],
+      bottomNavigationBar: Directionality(
+        textDirection: TextDirection.ltr,
+        child: BottomNavigationBar(
+          selectedIconTheme: IconThemeData(color: ColorManger.kMaterialColor),
+          unselectedIconTheme: IconThemeData(color: ColorManger.k7),
+          showUnselectedLabels: false,
+          currentIndex: currentIndex,
+          onTap: (value) {
+            setState(() {
+              currentIndex = value;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              label: '',
+              //! active
+              activeIcon: Icon(Icons.home_rounded),
+              //! Selected
+              icon: Icon(Icons.home_outlined),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              //! active
+              activeIcon: Icon(Icons.favorite),
+              //! Selected
+              icon: Icon(Icons.favorite_border_rounded),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              //! active
+              activeIcon: Icon(Icons.shopping_bag),
+              //! Selected
+              icon: Icon(Icons.shopping_bag_outlined),
+            ),
+          ],
+        ),
       ),
     );
   }

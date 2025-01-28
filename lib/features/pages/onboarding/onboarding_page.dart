@@ -3,6 +3,7 @@ import 'package:coffee_shop/core/components/custom_button.dart';
 import 'package:coffee_shop/core/constants/color_manger.dart';
 import 'package:coffee_shop/core/router/router.dart';
 import 'package:coffee_shop/features/data/models/onboarding_model.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -24,20 +25,22 @@ class _OnboardingPageState extends State<OnboardingPage> {
       body: ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
-        itemCount: onboardingModelFunc().length,
+        itemCount: onboardingModelFunc(context).length,
         itemBuilder: (context, index) {
+          //!
+          final local = AppLocalizations.of(context)!;
           return Column(
             children: [
               Stack(
                 children: [
-                  Image.asset(onboardingModelFunc()[index].image),
+                  Image.asset(onboardingModelFunc(context)[index].image),
                   Padding(
                     padding: EdgeInsetsDirectional.only(top: h * 0.655),
                     child: Center(
                       //! titel
                       child: Text(
                         textAlign: TextAlign.center,
-                        onboardingModelFunc()[index].titel,
+                        onboardingModelFunc(context)[index].titel,
                         style: textTheme.headlineLarge!.copyWith(
                             fontWeight: FontWeight.w600, color: Colors.white),
                       ),
@@ -49,7 +52,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               //! Subtitel
               Text(
                 textAlign: TextAlign.center,
-                onboardingModelFunc()[index].subTitel,
+                onboardingModelFunc(context)[index].subTitel,
                 style: textTheme.labelLarge!.copyWith(color: ColorManger.k6),
               ),
               SizedBox(height: h * 0.020),
@@ -60,7 +63,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 },
                 //! Custtom Button
                 child: CustomButton(
-                  titel: 'Get Started',
+                  titel: local.getStarted,
                   marginHorizontal: w * 0.050,
                   width: w * 0.327,
                   height: h * 0.056,

@@ -12,53 +12,57 @@ class SearchAndFilterWidget extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          //! Search Container
-          Container(
-            padding: EdgeInsetsDirectional.symmetric(horizontal: 25),
-            height: 52,
-            width: h * 0.350,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              gradient: LinearGradient(
-                begin: Alignment.bottomLeft,
-                end: Alignment.topRight,
-                colors: [
-                  Color.fromARGB(120, 17, 17, 17),
-                  Color.fromARGB(120, 49, 49, 49),
-                ],
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            //! Search Container
+            Container(
+              padding: EdgeInsetsDirectional.symmetric(horizontal: 25),
+              height: 52,
+              width: h * 0.350,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
+                  colors: [
+                    Color.fromARGB(120, 17, 17, 17),
+                    Color.fromARGB(120, 49, 49, 49),
+                  ],
+                ),
+              ),
+              child: Center(
+                //! Search
+                child: Row(
+                  children: [
+                    //! icon
+                    Icon(Icons.search, size: h * 0.040, color: Colors.white),
+                    SizedBox(width: w * 0.020),
+                    Text(
+                      'Search coffee',
+                      style:
+                          textTeme.titleSmall!.copyWith(color: ColorManger.k7),
+                    )
+                  ],
+                ),
               ),
             ),
-            child: Center(
-              //! Search
-              child: Row(
-                children: [
-                  //! icon
-                  Icon(Icons.search, size: h * 0.040, color: Colors.white),
-                  SizedBox(width: w * 0.020),
-                  Text(
-                    'Search coffee',
-                    style: textTeme.titleSmall!.copyWith(color: ColorManger.k7),
-                  )
-                ],
+            //! Filter
+            Container(
+              height: 52,
+              width: 52,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: ColorManger.kMaterialColor),
+              //! icon
+              child: Center(
+                child: Icon(Icons.filter_list_rounded, color: Colors.white),
               ),
             ),
-          ),
-          //! Filter
-          Container(
-            height: 52,
-            width: 52,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: ColorManger.kMaterialColor),
-            //! icon
-            child: Center(
-              child: Icon(Icons.filter_list_rounded, color: Colors.white),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
