@@ -244,6 +244,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Details'**
   String get detail;
+
+  /// No description provided for @searchCoffee.
+  ///
+  /// In en, this message translates to:
+  /// **'Search coffee'**
+  String get searchCoffee;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

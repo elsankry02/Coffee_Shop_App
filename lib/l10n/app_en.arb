@@ -23,6 +23,7 @@
   "latte":"Latte",
   "americano":"Americano",
   "cappuccino":"Cappuccino",
-  "detail":"Details"
+  "detail":"Details",
+  "searchCoffee":"Search coffee"
    
   }

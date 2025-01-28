@@ -1,4 +1,5 @@
 import 'package:coffee_shop/core/constants/color_manger.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class SearchAndFilterWidget extends StatelessWidget {
@@ -41,7 +42,7 @@ class SearchAndFilterWidget extends StatelessWidget {
                     Icon(Icons.search, size: h * 0.040, color: Colors.white),
                     SizedBox(width: w * 0.020),
                     Text(
-                      'Search coffee',
+                      AppLocalizations.of(context)!.searchCoffee,
                       style:
                           textTeme.titleSmall!.copyWith(color: ColorManger.k7),
                     )

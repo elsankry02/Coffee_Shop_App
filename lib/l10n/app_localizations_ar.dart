@@ -80,4 +80,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get detail => 'التفاصيل';
+
+  @override
+  String get searchCoffee => 'بحث عن القهوة';
 }
