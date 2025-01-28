@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
-    // final textTeme = Theme.of(context).textTheme;
+  
 
     return Scaffold(
       body: Stack(

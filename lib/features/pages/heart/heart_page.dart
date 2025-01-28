@@ -1,4 +1,3 @@
-import 'package:coffee_shop/core/constants/image_manger.dart';
 import 'package:flutter/material.dart';
 
 class HeartPage extends StatelessWidget {
@@ -10,7 +9,7 @@ class HeartPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Image.asset(ImageManger.kPuterUsers)],
+        children: [],
       ),
     );
   }

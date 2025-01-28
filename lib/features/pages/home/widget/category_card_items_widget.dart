@@ -29,7 +29,7 @@ class CategoryCardItemsWidget extends StatelessWidget {
             onTap: () {
               //! Push To Details Page
               context.router.push(
-                DetailsRoute(
+                DetailsItemRoute(
                   cardModel: cardModel[index],
                 ),
               );
@@ -72,7 +72,7 @@ class CategoryCardItemsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         //! price
-                        Text("\$ ${model.price}",
+                        Text("\$ ${model.mediumPrice}",
                             style: textTheme.titleMedium!.copyWith(
                               fontWeight: FontWeight.w600,
                             )),

@@ -18,6 +18,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final h = MediaQuery.of(context).size.height;
+    final w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.black,
       body: ListView.builder(
@@ -59,9 +60,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 },
                 //! Custtom Button
                 child: CustomButton(
-                  index: index,
-                  h: h,
-                  textTheme: textTheme,
+                  titel: 'Get Started',
+                  marginHorizontal: w * 0.050,
+                  width: w * 0.327,
+                  height: h * 0.056,
                 ),
               ),
             ],

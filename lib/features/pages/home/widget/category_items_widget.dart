@@ -44,7 +44,7 @@ class _CategoryItemsWidgetState extends State<CategoryItemsWidget> {
                       fontWeight: FontWeight.w600,
                       color: currantIndex == index
                           ? Colors.white
-                          : ColorManger.k3),
+                          : ColorManger.kBlack),
                 ),
               ),
             ),

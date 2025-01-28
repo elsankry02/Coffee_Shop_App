@@ -19,4 +19,5 @@ class SvgManger {
   static const kSearch = 'assets/svg/Search.svg';
   static const kStar = 'assets/svg/Star.svg';
   static const kHomeIndicator = 'assets/svg/HomeIndicator.svg';
+  static const kVector = 'assets/svg/Vector.svg';
 }

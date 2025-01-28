@@ -8,4 +8,7 @@ class ImageManger {
   static const kCoffee5 = 'assets/image/Coffee5.png';
   static const kPuterUsers = 'assets/image/puter_users_flat_icons.png';
   static const kSingle = 'assets/image/single.png';
+  static const kExtraMilk = 'assets/image/Extra_Milk.png';
+  static const kFastDelivery = 'assets/image/Fast_Delivery.png';
+  static const kQualityBean = 'assets/image/Quality_Bean.png';
 }

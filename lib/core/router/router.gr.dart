@@ -11,31 +11,31 @@
 part of 'router.dart';
 
 /// generated route for
-/// [DetailsPage]
-class DetailsRoute extends PageRouteInfo<DetailsRouteArgs> {
-  DetailsRoute({
+/// [DetailsItemPage]
+class DetailsItemRoute extends PageRouteInfo<DetailsItemRouteArgs> {
+  DetailsItemRoute({
     Key? key,
     required CardModel cardModel,
     List<PageRouteInfo>? children,
   }) : super(
-          DetailsRoute.name,
-          args: DetailsRouteArgs(key: key, cardModel: cardModel),
-          initialChildren: children,
-        );
+         DetailsItemRoute.name,
+         args: DetailsItemRouteArgs(key: key, cardModel: cardModel),
+         initialChildren: children,
+       );
 
-  static const String name = 'DetailsRoute';
+  static const String name = 'DetailsItemRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      final args = data.argsAs<DetailsRouteArgs>();
-      return DetailsPage(key: args.key, cardModel: args.cardModel);
+      final args = data.argsAs<DetailsItemRouteArgs>();
+      return DetailsItemPage(key: args.key, cardModel: args.cardModel);
     },
   );
 }
 
-class DetailsRouteArgs {
-  const DetailsRouteArgs({this.key, required this.cardModel});
+class DetailsItemRouteArgs {
+  const DetailsItemRouteArgs({this.key, required this.cardModel});
 
   final Key? key;
 
@@ -43,7 +43,7 @@ class DetailsRouteArgs {
 
   @override
   String toString() {
-    return 'DetailsRouteArgs{key: $key, cardModel: $cardModel}';
+    return 'DetailsItemRouteArgs{key: $key, cardModel: $cardModel}';
   }
 }
 
@@ -51,7 +51,7 @@ class DetailsRouteArgs {
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-      : super(HomeRoute.name, initialChildren: children);
+    : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
@@ -67,7 +67,7 @@ class HomeRoute extends PageRouteInfo<void> {
 /// [NavBarPage]
 class NavBarRoute extends PageRouteInfo<void> {
   const NavBarRoute({List<PageRouteInfo>? children})
-      : super(NavBarRoute.name, initialChildren: children);
+    : super(NavBarRoute.name, initialChildren: children);
 
   static const String name = 'NavBarRoute';
 
@@ -83,7 +83,7 @@ class NavBarRoute extends PageRouteInfo<void> {
 /// [OnboardingPage]
 class OnboardingRoute extends PageRouteInfo<void> {
   const OnboardingRoute({List<PageRouteInfo>? children})
-      : super(OnboardingRoute.name, initialChildren: children);
+    : super(OnboardingRoute.name, initialChildren: children);
 
   static const String name = 'OnboardingRoute';
 
@@ -99,7 +99,7 @@ class OnboardingRoute extends PageRouteInfo<void> {
 /// [SplashPage]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
-      : super(SplashRoute.name, initialChildren: children);
+    : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 
