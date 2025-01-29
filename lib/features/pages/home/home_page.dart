@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                 CategoryItemsWidget(),
                 SizedBox(height: h * 0.020),
                 //! Category Card Items Widget
-                CategoryCardItemsWidget()
+                CategoryCardItemsWidget(),
               ],
             ),
           ),
