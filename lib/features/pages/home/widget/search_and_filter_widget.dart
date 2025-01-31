@@ -1,4 +1,5 @@
 import 'package:coffee_shop/core/constants/color_manger.dart';
+import 'package:coffee_shop/features/pages/home/widget/change_lang_widget.dart';
 import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -10,61 +11,57 @@ class SearchAndFilterWidget extends StatelessWidget {
     final textTeme = Theme.of(context).textTheme;
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
-
+    final local = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
-      child: Directionality(
-        textDirection: TextDirection.ltr,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            //! Search Container
-            Container(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 25),
-              height: 52,
-              width: h * 0.350,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
-                  colors: [
-                    Color.fromARGB(120, 17, 17, 17),
-                    Color.fromARGB(120, 49, 49, 49),
-                  ],
-                ),
-              ),
-              child: Center(
-                //! Search
-                child: Row(
-                  children: [
-                    //! icon
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          //! TextFormField
+          Expanded(
+            child: TextFormField(
+              cursorColor: ColorManger.k2,
+              decoration: InputDecoration(
+                prefixIcon:
                     Icon(Icons.search, size: h * 0.040, color: Colors.white),
-                    SizedBox(width: w * 0.020),
-                    Text(
-                      AppLocalizations.of(context)!.searchCoffee,
-                      style:
-                          textTeme.titleSmall!.copyWith(color: ColorManger.k7),
-                    )
-                  ],
-                ),
+                hintText: local.searchCoffee,
+                hintStyle: textTeme.titleSmall!.copyWith(color: ColorManger.k7),
+                enabledBorder: outlineInputBorder(),
+                focusedBorder: outlineInputBorder(),
+                border: outlineInputBorder(),
               ),
             ),
-            //! Filter
-            Container(
-              height: 52,
-              width: 52,
+          ),
+          SizedBox(width: w * 0.020),
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                backgroundColor: ColorManger.kMaterialColor,
+                context: context,
+                builder: (context) {
+                  return ChangeLanguageWidget();
+                },
+              );
+            },
+            child: Container(
+              padding: EdgeInsetsDirectional.all(15),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(16),
                   color: ColorManger.kMaterialColor),
-              //! icon
               child: Center(
-                child: Icon(Icons.filter_list_rounded, color: Colors.white),
+                child: Icon(Icons.language, color: ColorManger.kWhite),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
+    );
+  }
+
+  OutlineInputBorder outlineInputBorder() {
+    return OutlineInputBorder(
+      borderSide: BorderSide(color: ColorManger.kBlack),
+      borderRadius: BorderRadius.circular(16),
     );
   }
 }

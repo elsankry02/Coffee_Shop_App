@@ -1,5 +1,6 @@
 import 'package:coffee_shop/core/constants/color_manger.dart';
 import 'package:coffee_shop/features/data/models/card_model.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
@@ -15,6 +16,7 @@ class DescriptrionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final local = AppLocalizations.of(context)!;
     return ReadMoreText(
       cardModel.description,
       trimMode: TrimMode.Line,
@@ -22,11 +24,11 @@ class DescriptrionWidget extends StatelessWidget {
           fontWeight: FontWeight.w600, color: ColorManger.kMaterialColor),
       trimLines: 2,
       //! Read More
-      trimCollapsedText: 'Read More',
+      trimCollapsedText: local.readMore,
       moreStyle: textTeme.labelLarge!.copyWith(
           fontWeight: FontWeight.w600, color: ColorManger.kMaterialColor),
       //! Read less
-      trimExpandedText: 'Read less',
+      trimExpandedText: local.readLess,
       lessStyle: textTeme.labelLarge!.copyWith(
           fontWeight: FontWeight.w600, color: ColorManger.kMaterialColor),
     );

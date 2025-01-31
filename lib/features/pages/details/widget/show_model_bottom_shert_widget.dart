@@ -1,9 +1,8 @@
 import 'package:coffee_shop/core/components/custom_button.dart';
 import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/constants/svg_manger.dart';
 import 'package:coffee_shop/features/data/models/card_model.dart';
+import 'package:coffee_shop/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ShowModelBottomShertWidget extends StatelessWidget {
   const ShowModelBottomShertWidget(
@@ -17,6 +16,7 @@ class ShowModelBottomShertWidget extends StatelessWidget {
     final textTeme = Theme.of(context).textTheme;
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
+    final local = AppLocalizations.of(context)!;
 
     return Container(
       padding: EdgeInsetsDirectional.symmetric(horizontal: 10),
@@ -38,32 +38,34 @@ class ShowModelBottomShertWidget extends StatelessWidget {
                 children: [
                   //! price
                   Text(
-                    "Price",
+                    local.price,
                     style: textTeme.bodyLarge!.copyWith(
                       color: ColorManger.k7,
                     ),
                   ),
-                  RichText(
-                    text: TextSpan(
-                      style: textTeme.titleMedium!.copyWith(
-                          color: ColorManger.kMaterialColor,
-                          fontWeight: FontWeight.w600),
-                      children: [
-                        TextSpan(text: r'$ '),
-                        TextSpan(text: priceSheet),
-                      ],
+                  Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: RichText(
+                      text: TextSpan(
+                        style: textTeme.titleMedium!.copyWith(
+                            color: ColorManger.kMaterialColor,
+                            fontWeight: FontWeight.w600),
+                        children: [
+                          TextSpan(text: r'$ '),
+                          TextSpan(text: priceSheet),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
               CustomButton(
-                  titel: 'Buy Now',
+                  titel: local.buyNow,
                   marginHorizontal: 2,
                   height: h * 0.056,
                   width: w * 0.600)
             ],
           ),
-          SvgPicture.asset(SvgManger.kHomeIndicator),
         ],
       ),
     );

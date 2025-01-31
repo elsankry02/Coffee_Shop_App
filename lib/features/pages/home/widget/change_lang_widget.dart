@@ -1,14 +1,19 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/constants/svg_manger.dart';
 import 'package:coffee_shop/core/enums/localization_enum.dart';
 import 'package:coffee_shop/features/data/local_cubit/localization_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 
-class ChangeLanguageWidget extends StatelessWidget {
+class ChangeLanguageWidget extends StatefulWidget {
   const ChangeLanguageWidget({super.key});
+
+  @override
+  State<ChangeLanguageWidget> createState() => _ChangeLanguageWidgetState();
+}
+
+class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
+  bool isSelected = true;
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +31,6 @@ class ChangeLanguageWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(height: h * 0.020),
-            Center(
-              child: SvgPicture.asset(SvgManger.kHomeIndicator),
-            ),
-            SizedBox(height: h * 0.020),
             //! Arabic
             MaterialButton(
               height: 50,
@@ -43,17 +44,9 @@ class ChangeLanguageWidget extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'اللغة العربية',
-                      style: textTeme.titleMedium!.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: ColorManger.kWhite),
-                    ),
-                    Text('🇪🇬'),
-                    Text(
-                      'Arabic',
                       style: textTeme.titleMedium!.copyWith(
                           fontWeight: FontWeight.w600,
                           color: ColorManger.kWhite),
@@ -62,9 +55,8 @@ class ChangeLanguageWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: h * 0.020),
-            //! Enlish
 
+            //! Enlish
             MaterialButton(
               height: 50,
               minWidth: double.infinity,
@@ -77,15 +69,7 @@ class ChangeLanguageWidget extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'اللغة الانجليزية',
-                      style: textTeme.titleMedium!.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: ColorManger.kWhite),
-                    ),
-                    Text('🇺🇸'),
                     Text(
                       'English',
                       style: textTeme.titleMedium!.copyWith(

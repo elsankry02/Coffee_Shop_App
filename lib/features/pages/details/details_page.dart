@@ -20,6 +20,8 @@ class DetailsItemPage extends StatelessWidget {
     final textTeme = Theme.of(context).textTheme;
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
+    final local = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         //! AppBar Text
@@ -72,7 +74,7 @@ class DetailsItemPage extends StatelessWidget {
             ),
             //! Description Text
             Text(
-              'Description',
+              local.description,
               style: textTeme.bodyLarge!.copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: h * 0.010),
@@ -81,7 +83,7 @@ class DetailsItemPage extends StatelessWidget {
             SizedBox(height: h * 0.024),
             //! Size
             Text(
-              'Size',
+              local.size,
               style: textTeme.bodyLarge!.copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: h * 0.016),

@@ -24,6 +24,12 @@
   "americano":"Americano",
   "cappuccino":"Cappuccino",
   "detail":"Details",
-  "searchCoffee":"Search coffee"
+  "searchCoffee":"Search coffee",
+  "description":"Discription",
+  "size":"Size",
+  "readMore":"Read More",
+  "readLess":"Read Less",
+  "price":"Price",
+  "buyNow":"Buy Now"
    
   }

@@ -83,4 +83,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchCoffee => 'Search coffee';
+
+  @override
+  String get description => 'Discription';
+
+  @override
+  String get size => 'Size';
+
+  @override
+  String get readMore => 'Read More';
+
+  @override
+  String get readLess => 'Read Less';
+
+  @override
+  String get price => 'Price';
+
+  @override
+  String get buyNow => 'Buy Now';
 }

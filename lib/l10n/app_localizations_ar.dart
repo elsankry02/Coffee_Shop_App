@@ -83,4 +83,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get searchCoffee => 'بحث عن القهوة';
+
+  @override
+  String get description => 'الوصف';
+
+  @override
+  String get size => 'مقاس';
+
+  @override
+  String get readMore => 'اقراءة المزيد';
+
+  @override
+  String get readLess => 'قراءة أقل';
+
+  @override
+  String get price => 'السعر';
+
+  @override
+  String get buyNow => 'اشتري الآن';
 }

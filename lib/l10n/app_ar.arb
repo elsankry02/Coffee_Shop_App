@@ -24,7 +24,13 @@
 "americano":"أمريكانو",
 "cappuccino":"كابتشينو",
 "detail":"التفاصيل",
-"searchCoffee":"بحث عن القهوة"
+"searchCoffee":"بحث عن القهوة",
+"description":"الوصف",
+"size":"مقاس",
+"readMore":"اقراءة المزيد",
+"readLess":"قراءة أقل",
+"price":"السعر",
+"buyNow":"اشتري الآن"
   }
 
 
