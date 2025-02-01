@@ -1,9 +1,9 @@
-import 'package:coffee_shop/core/cached/cached_hleper.dart';
-import 'package:coffee_shop/core/constants/string_manger.dart';
-import 'package:coffee_shop/core/enums/localization_enum.dart';
-import 'package:coffee_shop/core/router/router.dart';
-import 'package:coffee_shop/features/data/local_cubit/localization_cubit.dart';
-import 'package:coffee_shop/l10n/app_localizations.dart';
+import 'core/cached/cached_hleper.dart';
+import 'core/constants/string_manger.dart';
+import 'core/enums/localization_enum.dart';
+import 'core/router/router.dart';
+import 'features/data/local_cubit/localization_cubit.dart';
+import 'l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';

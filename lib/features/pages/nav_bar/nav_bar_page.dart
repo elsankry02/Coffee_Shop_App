@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/features/pages/cart/cart_page.dart';
-import 'package:coffee_shop/features/pages/heart/heart_page.dart';
-import 'package:coffee_shop/features/pages/home/home_page.dart';
+import '../../../core/constants/color_manger.dart';
+import '../cart/cart_page.dart';
+import '../heart/heart_page.dart';
+import '../home/home_page.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

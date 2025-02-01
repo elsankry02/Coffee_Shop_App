@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/components/custom_button.dart';
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/router/router.dart';
-import 'package:coffee_shop/features/data/models/onboarding_model.dart';
-import 'package:coffee_shop/l10n/app_localizations.dart';
+import '../../../core/components/custom_button.dart';
+import '../../../core/constants/color_manger.dart';
+import '../../../core/router/router.dart';
+import '../../data/models/onboarding_model.dart';
+import '../../../l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

@@ -1,4 +1,4 @@
-import 'package:coffee_shop/core/constants/color_manger.dart';
+import '../constants/color_manger.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/l10n/app_localizations.dart';
+import '../../../../core/constants/color_manger.dart';
+import '../../../../l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItemsWidget extends StatefulWidget {

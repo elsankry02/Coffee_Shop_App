@@ -1,6 +1,6 @@
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/features/pages/home/widget/change_lang_widget.dart';
-import 'package:coffee_shop/l10n/app_localizations.dart';
+import '../../../../core/constants/color_manger.dart';
+import 'change_lang_widget.dart';
+import '../../../../l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class SearchAndFilterWidget extends StatelessWidget {

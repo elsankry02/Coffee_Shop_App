@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/constants/image_manger.dart';
-import 'package:coffee_shop/core/router/router.dart';
+import '../../../core/constants/image_manger.dart';
+import '../../../core/router/router.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

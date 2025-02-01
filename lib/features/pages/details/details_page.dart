@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/constants/svg_manger.dart';
-import 'package:coffee_shop/features/data/models/card_model.dart';
-import 'package:coffee_shop/features/pages/details/widget/choice_size_widget.dart';
-import 'package:coffee_shop/features/pages/details/widget/descriptrion_widget.dart';
-import 'package:coffee_shop/features/pages/details/widget/details_image_widget.dart';
-import 'package:coffee_shop/features/pages/details/widget/rating_widget.dart';
-import 'package:coffee_shop/features/pages/details/widget/superiority_widget.dart';
-import 'package:coffee_shop/l10n/app_localizations.dart';
+import '../../../core/constants/color_manger.dart';
+import '../../../core/constants/svg_manger.dart';
+import '../../data/models/card_model.dart';
+import 'widget/choice_size_widget.dart';
+import 'widget/descriptrion_widget.dart';
+import 'widget/details_image_widget.dart';
+import 'widget/rating_widget.dart';
+import 'widget/superiority_widget.dart';
+import '../../../l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

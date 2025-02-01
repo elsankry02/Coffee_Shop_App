@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/router/router.dart';
-import 'package:coffee_shop/features/data/models/card_model.dart';
+import '../../../../core/constants/color_manger.dart';
+import '../../../../core/router/router.dart';
+import '../../../data/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCardItemsWidget extends StatelessWidget {

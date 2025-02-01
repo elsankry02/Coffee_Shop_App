@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/enums/localization_enum.dart';
-import 'package:coffee_shop/features/data/local_cubit/localization_cubit.dart';
+import '../../../../core/constants/color_manger.dart';
+import '../../../../core/enums/localization_enum.dart';
+import '../../../data/local_cubit/localization_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

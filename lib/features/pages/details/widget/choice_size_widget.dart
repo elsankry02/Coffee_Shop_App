@@ -1,6 +1,6 @@
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/features/data/models/card_model.dart';
-import 'package:coffee_shop/features/pages/details/widget/show_model_bottom_shert_widget.dart';
+import '../../../../core/constants/color_manger.dart';
+import '../../../data/models/card_model.dart';
+import 'show_model_bottom_shert_widget.dart';
 import 'package:flutter/material.dart';
 
 enum Choice { small, medium, large }

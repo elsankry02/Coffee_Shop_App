@@ -1,6 +1,6 @@
-import 'package:coffee_shop/core/constants/color_manger.dart';
-import 'package:coffee_shop/core/constants/svg_manger.dart';
-import 'package:coffee_shop/features/data/models/card_model.dart';
+import '../../../../core/constants/color_manger.dart';
+import '../../../../core/constants/svg_manger.dart';
+import '../../../data/models/card_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

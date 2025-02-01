@@ -1,4 +1,4 @@
-import 'package:coffee_shop/core/constants/image_manger.dart';
+import '../../../../core/constants/image_manger.dart';
 import 'package:flutter/material.dart';
 
 class SuperiorityWidget extends StatelessWidget {

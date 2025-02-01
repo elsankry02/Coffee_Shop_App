@@ -1,5 +1,5 @@
-import 'package:coffee_shop/core/cached/cached_hleper.dart';
-import 'package:coffee_shop/core/enums/localization_enum.dart';
+import '../../../core/cached/cached_hleper.dart';
+import '../../../core/enums/localization_enum.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

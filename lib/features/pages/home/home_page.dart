@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/features/pages/home/widget/back_ground_container_widget.dart';
-import 'package:coffee_shop/features/pages/home/widget/banner_image_widget.dart';
-import 'package:coffee_shop/features/pages/home/widget/category_card_items_widget.dart';
-import 'package:coffee_shop/features/pages/home/widget/category_items_widget.dart';
-import 'package:coffee_shop/features/pages/home/widget/search_and_filter_widget.dart';
-import 'package:coffee_shop/features/pages/home/widget/text_app_widget.dart';
+import 'widget/back_ground_container_widget.dart';
+import 'widget/banner_image_widget.dart';
+import 'widget/category_card_items_widget.dart';
+import 'widget/category_items_widget.dart';
+import 'widget/search_and_filter_widget.dart';
+import 'widget/text_app_widget.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

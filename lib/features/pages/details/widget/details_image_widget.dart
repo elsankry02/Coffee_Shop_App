@@ -1,4 +1,4 @@
-import 'package:coffee_shop/features/data/models/card_model.dart';
+import '../../../data/models/card_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailsImageWidget extends StatelessWidget {
