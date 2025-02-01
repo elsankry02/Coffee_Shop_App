@@ -1,18 +1,14 @@
-import '../../../../core/constants/image_manger.dart';
 import 'package:flutter/material.dart';
 
-class SuperiorityWidget extends StatelessWidget {
-  const SuperiorityWidget({
-    super.key,
-    required this.h,
-    required this.w,
-  });
+import '../../../../core/constants/image_manger.dart';
 
-  final double h;
-  final double w;
+class SuperiorityWidget extends StatelessWidget {
+  const SuperiorityWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final h = MediaQuery.of(context).size.height;
+    final w = MediaQuery.of(context).size.width;
     return Row(
       children: [
         //! kFastDelivery

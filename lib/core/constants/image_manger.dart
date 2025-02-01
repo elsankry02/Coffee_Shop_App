@@ -11,4 +11,6 @@ class ImageManger {
   static const kExtraMilk = 'assets/image/Extra_Milk.png';
   static const kFastDelivery = 'assets/image/Fast_Delivery.png';
   static const kQualityBean = 'assets/image/Quality_Bean.png';
+  static const kCart = 'assets/image/cart.png';
+  static const kHeart = 'assets/image/Heart.png';
 }

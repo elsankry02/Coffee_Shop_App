@@ -1,15 +1,16 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../core/constants/color_manger.dart';
 import '../../../core/constants/svg_manger.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../data/models/card_model.dart';
 import 'widget/choice_size_widget.dart';
 import 'widget/descriptrion_widget.dart';
 import 'widget/details_image_widget.dart';
 import 'widget/rating_widget.dart';
 import 'widget/superiority_widget.dart';
-import '../../../l10n/app_localizations.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 @RoutePage()
 class DetailsItemPage extends StatelessWidget {
@@ -60,7 +61,7 @@ class DetailsItemPage extends StatelessWidget {
                   style: textTeme.bodySmall!.copyWith(color: ColorManger.k7),
                 ),
                 //! Superiority Widget
-                SuperiorityWidget(h: h, w: w),
+                SuperiorityWidget(),
               ],
             ),
             //! Rating Widget

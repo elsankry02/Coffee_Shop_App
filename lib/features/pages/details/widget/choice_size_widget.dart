@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/constants/color_manger.dart';
 import '../../../data/models/card_model.dart';
 import 'show_model_bottom_shert_widget.dart';
-import 'package:flutter/material.dart';
 
 enum Choice { small, medium, large }
 
@@ -20,141 +21,144 @@ class _ChoiceSizeWidgetState extends State<ChoiceSizeWidget> {
 
     final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        //! Small Tap
-        GestureDetector(
-          onTap: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                return ShowModelBottomShertWidget(
-                  priceSheet: widget.cardModel.smallPrice,
-                  cardModel: widget.cardModel,
-                );
-              },
-            );
-            setState(() {
-              isChoice = Choice.small;
-            });
-          },
-          child: Container(
-            height: h * 0.045,
-            width: w * 0.300,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                  width: 1.5,
-                  color: isChoice == Choice.small
-                      ? ColorManger.kMaterialColor
-                      : ColorManger.kBorderEnum),
-              color: isChoice == Choice.small
-                  ? ColorManger.kBackGroundEnum
-                  : ColorManger.kWhite,
-            ),
-            child: Center(
-              child: Text(
-                'S',
-                style: textTeme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          //! Small Tap
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return ShowModelBottomShertWidget(
+                    priceSheet: widget.cardModel.smallPrice,
+                    cardModel: widget.cardModel,
+                  );
+                },
+              );
+              setState(() {
+                isChoice = Choice.small;
+              });
+            },
+            child: Container(
+              height: h * 0.045,
+              width: w * 0.300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                    width: 1.5,
                     color: isChoice == Choice.small
                         ? ColorManger.kMaterialColor
-                        : ColorManger.kBlack),
-              ),
-            ),
-          ),
-        ),
-        //! Medium Tap
-        GestureDetector(
-          onTap: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                return ShowModelBottomShertWidget(
-                  priceSheet: widget.cardModel.mediumPrice,
-                  cardModel: widget.cardModel,
-                );
-              },
-            );
-            setState(() {
-              isChoice = Choice.medium;
-            });
-          },
-          child: Container(
-            height: h * 0.045,
-            width: w * 0.300,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                //! Border Color
-                border: Border.all(
-                    width: 1.5,
-                    color: isChoice == Choice.medium
-                        ? ColorManger.kMaterialColor
                         : ColorManger.kBorderEnum),
-                //! BackGround Color
-                color: isChoice == Choice.medium
+                color: isChoice == Choice.small
                     ? ColorManger.kBackGroundEnum
-                    : ColorManger.kWhite),
-            child: Center(
-              //! Text Color
-              child: Text(
-                'M',
-                style: textTeme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: isChoice == Choice.medium
-                        ? ColorManger.kMaterialColor
-                        : ColorManger.kBlack),
+                    : ColorManger.kWhite,
+              ),
+              child: Center(
+                child: Text(
+                  'S',
+                  style: textTeme.bodyMedium!.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: isChoice == Choice.small
+                          ? ColorManger.kMaterialColor
+                          : ColorManger.kBlack),
+                ),
               ),
             ),
           ),
-        ),
-        //! Large Tap
-        GestureDetector(
-          onTap: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                //! Show Model Bottom Shert Widget
-                return ShowModelBottomShertWidget(
-                  priceSheet: widget.cardModel.largePrice,
-                  cardModel: widget.cardModel,
-                );
-              },
-            );
-            setState(() {
-              isChoice = Choice.large;
-            });
-          },
-          child: Container(
-            height: h * 0.045,
-            width: w * 0.250,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                //! Border Color
-                border: Border.all(
-                    width: 1.5,
-                    color: isChoice == Choice.large
-                        ? ColorManger.kMaterialColor
-                        : ColorManger.kBorderEnum),
-                //! BackGround Color
-                color: isChoice == Choice.large
-                    ? ColorManger.kBackGroundEnum
-                    : ColorManger.kWhite),
-            child: Center(
-              //! Text Color
-              child: Text(
-                'L',
-                style: textTeme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.w600,
-                    color: isChoice == Choice.large
-                        ? ColorManger.kMaterialColor
-                        : ColorManger.kBlack),
+          //! Medium Tap
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return ShowModelBottomShertWidget(
+                    priceSheet: widget.cardModel.mediumPrice,
+                    cardModel: widget.cardModel,
+                  );
+                },
+              );
+              setState(() {
+                isChoice = Choice.medium;
+              });
+            },
+            child: Container(
+              height: h * 0.045,
+              width: w * 0.300,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //! Border Color
+                  border: Border.all(
+                      width: 1.5,
+                      color: isChoice == Choice.medium
+                          ? ColorManger.kMaterialColor
+                          : ColorManger.kBorderEnum),
+                  //! BackGround Color
+                  color: isChoice == Choice.medium
+                      ? ColorManger.kBackGroundEnum
+                      : ColorManger.kWhite),
+              child: Center(
+                //! Text Color
+                child: Text(
+                  'M',
+                  style: textTeme.bodyMedium!.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: isChoice == Choice.medium
+                          ? ColorManger.kMaterialColor
+                          : ColorManger.kBlack),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+          //! Large Tap
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  //! Show Model Bottom Shert Widget
+                  return ShowModelBottomShertWidget(
+                    priceSheet: widget.cardModel.largePrice,
+                    cardModel: widget.cardModel,
+                  );
+                },
+              );
+              setState(() {
+                isChoice = Choice.large;
+              });
+            },
+            child: Container(
+              height: h * 0.045,
+              width: w * 0.250,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  //! Border Color
+                  border: Border.all(
+                      width: 1.5,
+                      color: isChoice == Choice.large
+                          ? ColorManger.kMaterialColor
+                          : ColorManger.kBorderEnum),
+                  //! BackGround Color
+                  color: isChoice == Choice.large
+                      ? ColorManger.kBackGroundEnum
+                      : ColorManger.kWhite),
+              child: Center(
+                //! Text Color
+                child: Text(
+                  'L',
+                  style: textTeme.bodyMedium!.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: isChoice == Choice.large
+                          ? ColorManger.kMaterialColor
+                          : ColorManger.kBlack),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
