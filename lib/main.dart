@@ -1,12 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'core/cached/cached_hleper.dart';
 import 'core/constants/string_manger.dart';
 import 'core/enums/localization_enum.dart';
 import 'core/router/router.dart';
 import 'features/data/local_cubit/localization_cubit.dart';
 import 'l10n/app_localizations.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +41,7 @@ class CoffeeShop extends StatelessWidget {
             );
           }
           return MaterialApp.router(
+            locale: Locale('en'),
             localizationsDelegates: [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,

@@ -1,9 +1,10 @@
-import 'package:auto_route/auto_route.dart';
+import 'package:coffee_shop/core/cached/cached_hleper.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/constants/color_manger.dart';
 import '../../../../core/enums/localization_enum.dart';
 import '../../../data/local_cubit/localization_cubit.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ChangeLanguageWidget extends StatefulWidget {
   const ChangeLanguageWidget({super.key});
@@ -13,12 +14,22 @@ class ChangeLanguageWidget extends StatefulWidget {
 }
 
 class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
-  bool isSelected = true;
+  late String changeLang;
+  void getLangFunc() {
+    changeLang = CachedHleper.getString(key: 'Language') ?? 'en';
+  }
+
+  @override
+  void initState() {
+    getLangFunc();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     final textTeme = Theme.of(context).textTheme;
     final h = MediaQuery.of(context).size.height;
+    final spaceBetween = MainAxisAlignment.spaceBetween;
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadiusDirectional.horizontal(
@@ -39,11 +50,14 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
                 context
                     .read<LocalizationCubit>()
                     .localFunc(LocalizationEnum.arabic);
-                context.router.maybePop();
+                setState(() {
+                  changeLang = 'ar';
+                });
               },
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
+                  mainAxisAlignment: spaceBetween,
                   children: [
                     Text(
                       'اللغة العربية',
@@ -51,6 +65,10 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
                           fontWeight: FontWeight.w600,
                           color: ColorManger.kWhite),
                     ),
+                    changeLang == 'ar'
+                        ? Icon(Icons.check_box, color: ColorManger.kBlack)
+                        : Icon(Icons.check_box_outline_blank,
+                            color: ColorManger.kBlack)
                   ],
                 ),
               ),
@@ -64,11 +82,14 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
                 context
                     .read<LocalizationCubit>()
                     .localFunc(LocalizationEnum.english);
-                context.router.maybePop();
+                setState(() {
+                  changeLang = 'en';
+                });
               },
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Row(
+                  mainAxisAlignment: spaceBetween,
                   children: [
                     Text(
                       'English',
@@ -76,6 +97,10 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
                           fontWeight: FontWeight.w600,
                           color: ColorManger.kWhite),
                     ),
+                    changeLang == 'en'
+                        ? Icon(Icons.check_box, color: ColorManger.kBlack)
+                        : Icon(Icons.check_box_outline_blank,
+                            color: ColorManger.kBlack),
                   ],
                 ),
               ),

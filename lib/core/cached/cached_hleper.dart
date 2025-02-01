@@ -14,4 +14,13 @@ class CachedHleper {
   static String? getString({required String key}) {
     return sharedPreferences.getString(key);
   }
+
+  static Future<void> setBool(
+      {required String key, required bool value}) async {
+    await sharedPreferences.setBool(key, value);
+  }
+
+  static bool? getBool({required String key}) {
+    return sharedPreferences.getBool(key);
+  }
 }
