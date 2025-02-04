@@ -1,11 +1,12 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:coffee_shop/core/router/router.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/color_manger.dart';
 import '../../../../l10n/app_localizations.dart';
-import 'change_lang_widget.dart';
 
-class SearchAndFilterWidget extends StatelessWidget {
-  const SearchAndFilterWidget({super.key});
+class SearchAndSettingWidget extends StatelessWidget {
+  const SearchAndSettingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +38,7 @@ class SearchAndFilterWidget extends StatelessWidget {
           //! Change Lang
           GestureDetector(
             onTap: () {
-              showModalBottomSheet(
-                backgroundColor: ColorManger.kMaterialColor,
-                context: context,
-                builder: (context) {
-                  return ChangeLanguageWidget();
-                },
-              );
+              context.router.push(SettingRoute());
             },
             child: Container(
               padding: EdgeInsetsDirectional.all(15),

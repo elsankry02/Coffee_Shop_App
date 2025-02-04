@@ -6,7 +6,7 @@ import 'core/cached/cached_hleper.dart';
 import 'core/constants/string_manger.dart';
 import 'core/enums/localization_enum.dart';
 import 'core/router/router.dart';
-import 'features/data/local_cubit/localization_cubit.dart';
+import 'features/data/cubit/local_lang/localization_cubit.dart';
 import 'l10n/app_localizations.dart';
 
 void main() async {
@@ -20,28 +20,18 @@ class CoffeeShop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          LocalizationCubit()..localFunc(LocalizationEnum.intial),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              LocalizationCubit()..localFunc(LocalizationEnum.initial),
+        ),
+      ],
       child: BlocBuilder<LocalizationCubit, LocalizationState>(
-        builder: (context, state) {
-          if (state is LocalizationChange) {
-            return MaterialApp.router(
-              locale: Locale(state.languageCode),
-              localizationsDelegates: [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: AppLocalizations.supportedLocales,
-              routerConfig: router.config(),
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(fontFamily: kSora),
-            );
-          }
+          builder: (context, state) {
+        if (state is LocalizationChange) {
           return MaterialApp.router(
-            locale: Locale('en'),
+            locale: Locale(state.languageCode),
             localizationsDelegates: [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
@@ -53,8 +43,21 @@ class CoffeeShop extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: kSora),
           );
-        },
-      ),
+        }
+        return MaterialApp.router(
+          locale: Locale('en'),
+          localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizations.supportedLocales,
+          routerConfig: router.config(),
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(fontFamily: kSora),
+        );
+      }),
     );
   }
 }

@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/constants/color_manger.dart';
 import '../../../../core/enums/localization_enum.dart';
-import '../../../data/local_cubit/localization_cubit.dart';
+import '../../../data/cubit/local_lang/localization_cubit.dart';
 
 class ChangeLanguageWidget extends StatefulWidget {
   const ChangeLanguageWidget({super.key});

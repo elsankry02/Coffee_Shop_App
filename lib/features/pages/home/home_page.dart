@@ -3,7 +3,7 @@ import 'widget/back_ground_container_widget.dart';
 import 'widget/banner_image_widget.dart';
 import 'widget/category_card_items_widget.dart';
 import 'widget/category_items_widget.dart';
-import 'widget/search_and_filter_widget.dart';
+import 'widget/search_and_setting_widget.dart';
 import 'widget/text_app_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                 TextAppWidget(),
                 SizedBox(height: h * 0.030),
                 //! Search And Filter AppBar
-                SearchAndFilterWidget(),
+                SearchAndSettingWidget(),
                 SizedBox(height: h * 0.025),
                 //! Banner Image Widget
                 BannerImageWidget(),
