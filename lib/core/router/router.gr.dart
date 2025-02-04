@@ -18,10 +18,10 @@ class DetailsItemRoute extends PageRouteInfo<DetailsItemRouteArgs> {
     required CardModel cardModel,
     List<PageRouteInfo>? children,
   }) : super(
-         DetailsItemRoute.name,
-         args: DetailsItemRouteArgs(key: key, cardModel: cardModel),
-         initialChildren: children,
-       );
+          DetailsItemRoute.name,
+          args: DetailsItemRouteArgs(key: key, cardModel: cardModel),
+          initialChildren: children,
+        );
 
   static const String name = 'DetailsItemRoute';
 
@@ -51,7 +51,7 @@ class DetailsItemRouteArgs {
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-    : super(HomeRoute.name, initialChildren: children);
+      : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
@@ -67,7 +67,7 @@ class HomeRoute extends PageRouteInfo<void> {
 /// [NavBarPage]
 class NavBarRoute extends PageRouteInfo<void> {
   const NavBarRoute({List<PageRouteInfo>? children})
-    : super(NavBarRoute.name, initialChildren: children);
+      : super(NavBarRoute.name, initialChildren: children);
 
   static const String name = 'NavBarRoute';
 
@@ -83,7 +83,7 @@ class NavBarRoute extends PageRouteInfo<void> {
 /// [OnboardingPage]
 class OnboardingRoute extends PageRouteInfo<void> {
   const OnboardingRoute({List<PageRouteInfo>? children})
-    : super(OnboardingRoute.name, initialChildren: children);
+      : super(OnboardingRoute.name, initialChildren: children);
 
   static const String name = 'OnboardingRoute';
 
@@ -96,10 +96,26 @@ class OnboardingRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [SettingPage]
+class SettingRoute extends PageRouteInfo<void> {
+  const SettingRoute({List<PageRouteInfo>? children})
+      : super(SettingRoute.name, initialChildren: children);
+
+  static const String name = 'SettingRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingPage();
+    },
+  );
+}
+
+/// generated route for
 /// [SplashPage]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
-    : super(SplashRoute.name, initialChildren: children);
+      : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 

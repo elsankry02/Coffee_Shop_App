@@ -1,1 +1,1 @@
-enum LocalizationEnum { intial, arabic, english }
+enum LocalizationEnum { initial, arabic, english }

@@ -45,7 +45,6 @@ class CoffeeShop extends StatelessWidget {
           );
         }
         return MaterialApp.router(
-          locale: Locale('en'),
           localizationsDelegates: [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
