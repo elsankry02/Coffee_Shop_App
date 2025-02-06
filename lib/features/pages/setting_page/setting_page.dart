@@ -25,7 +25,6 @@ class _SettingPageState extends State<SettingPage> {
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(horizontal: 15),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //! Change Language
             GestureDetector(
