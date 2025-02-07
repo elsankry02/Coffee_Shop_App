@@ -42,9 +42,7 @@ class _SettingPageState extends State<SettingPage> {
                 child: Text('Change Language'),
               ),
             ),
-            SizedBox(
-              height: h * 0.030,
-            ),
+            SizedBox(height: h * 0.030),
 
             //! Change Theme
             GestureDetector(
