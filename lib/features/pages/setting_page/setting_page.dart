@@ -43,7 +43,7 @@ class _SettingPageState extends State<SettingPage> {
               ),
             ),
             SizedBox(
-              height: h * 0.020,
+              height: h * 0.030,
             ),
 
             //! Change Theme
