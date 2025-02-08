@@ -1,7 +1,7 @@
 import 'package:coffee_shop/core/cached/cached_hleper.dart';
 import 'package:coffee_shop/core/constants/color_manger.dart';
 import 'package:coffee_shop/core/enums/change_theme_enum.dart';
-import 'package:coffee_shop/features/data/cubit/change_theme/change_theme_cubit.dart';
+import 'package:coffee_shop/features/data/cubit/local_lang/localization_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,7 +38,9 @@ class _ChangeThemeWidgetState extends State<ChangeThemeWidget> {
           height: 50,
           minWidth: double.infinity,
           onPressed: () {
-            context.read<ChangeThemeCubit>().changeTheme(ChangeThemeEnum.dark);
+            context
+                .read<ChangeLanguageAndThemeAppCubit>()
+                .changeThemeFunc(ChangeThemeEnum.dark);
             setState(() {
               isSaved = 'dark';
             });
@@ -67,7 +69,9 @@ class _ChangeThemeWidgetState extends State<ChangeThemeWidget> {
           height: 50,
           minWidth: double.infinity,
           onPressed: () {
-            context.read<ChangeThemeCubit>().changeTheme(ChangeThemeEnum.light);
+            context
+                .read<ChangeLanguageAndThemeAppCubit>()
+                .changeThemeFunc(ChangeThemeEnum.light);
 
             setState(() {
               isSaved = 'light';

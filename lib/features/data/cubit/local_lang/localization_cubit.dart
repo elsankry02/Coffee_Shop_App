@@ -1,3 +1,4 @@
+import 'package:coffee_shop/core/enums/change_theme_enum.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -6,10 +7,11 @@ import '../../../../core/enums/localization_enum.dart';
 
 part 'localization_state.dart';
 
-class LocalizationCubit extends Cubit<LocalizationState> {
-  LocalizationCubit() : super(LocalizationInitial());
+class ChangeLanguageAndThemeAppCubit
+    extends Cubit<ChangeLanguageAndThemeAppState> {
+  ChangeLanguageAndThemeAppCubit() : super(LocalizationInitial());
 
-  localFunc(LocalizationEnum localizationEnum) {
+  changeLangFunc(LocalizationEnum localizationEnum) {
     switch (localizationEnum) {
       case LocalizationEnum.initial:
         if (CachedHleper.getString(key: 'Language') != null) {
@@ -33,6 +35,25 @@ class LocalizationCubit extends Cubit<LocalizationState> {
         emit(
           LocalizationChange(languageCode: 'en'),
         );
+    }
+  }
+
+  changeThemeFunc(ChangeThemeEnum changeThemeEnum) {
+    switch (changeThemeEnum) {
+      case ChangeThemeEnum.initial:
+        if (CachedHleper.getString(key: 'theme') != null) {
+          if (CachedHleper.getString(key: 'theme') == 'light') {
+            emit(AppChangeTheme(isChange: 'light'));
+          } else {
+            emit(AppChangeTheme(isChange: 'dark'));
+          }
+        }
+      case ChangeThemeEnum.light:
+        CachedHleper.setString(key: 'theme', value: 'light');
+        emit(AppChangeTheme(isChange: 'light'));
+      case ChangeThemeEnum.dark:
+        CachedHleper.setString(key: 'theme', value: 'dark');
+        emit(AppChangeTheme(isChange: 'dark'));
     }
   }
 }

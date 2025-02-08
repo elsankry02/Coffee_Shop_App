@@ -48,8 +48,8 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
               minWidth: double.infinity,
               onPressed: () {
                 context
-                    .read<LocalizationCubit>()
-                    .localFunc(LocalizationEnum.arabic);
+                    .read<ChangeLanguageAndThemeAppCubit>()
+                    .changeLangFunc(LocalizationEnum.arabic);
                 setState(() {
                   changeLang = 'ar';
                 });
@@ -80,8 +80,8 @@ class _ChangeLanguageWidgetState extends State<ChangeLanguageWidget> {
               minWidth: double.infinity,
               onPressed: () {
                 context
-                    .read<LocalizationCubit>()
-                    .localFunc(LocalizationEnum.english);
+                    .read<ChangeLanguageAndThemeAppCubit>()
+                    .changeLangFunc(LocalizationEnum.english);
                 setState(() {
                   changeLang = 'en';
                 });
