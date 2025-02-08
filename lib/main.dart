@@ -23,12 +23,12 @@ class CoffeeShop extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => ChangeLanguageAndThemeAppCubit()
-            ..changeLangFunc(LocalizationEnum.initial),
+          create: (context) =>
+              LocalizationCubit()..localFunc(LocalizationEnum.initial),
         ),
       ],
-      child: BlocBuilder<ChangeLanguageAndThemeAppCubit,
-          ChangeLanguageAndThemeAppState>(builder: (context, state) {
+      child: BlocBuilder<LocalizationCubit, LocalizationState>(
+          builder: (context, state) {
         if (state is LocalizationChange) {
           return MaterialApp.router(
             locale: Locale(state.languageCode),

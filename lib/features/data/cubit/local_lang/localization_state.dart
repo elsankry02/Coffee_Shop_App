@@ -1,18 +1,12 @@
 part of 'localization_cubit.dart';
 
 @immutable
-sealed class ChangeLanguageAndThemeAppState {}
+sealed class LocalizationState {}
 
-final class LocalizationInitial extends ChangeLanguageAndThemeAppState {}
+final class LocalizationInitial extends LocalizationState {}
 
-final class LocalizationChange extends ChangeLanguageAndThemeAppState {
+final class LocalizationChange extends LocalizationState {
   final String languageCode;
 
   LocalizationChange({required this.languageCode});
-}
-
-final class AppChangeTheme extends ChangeLanguageAndThemeAppState {
-  final String isChange;
-
-  AppChangeTheme({required this.isChange});
 }
