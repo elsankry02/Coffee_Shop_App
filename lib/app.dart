@@ -1,8 +1,8 @@
-import 'package:coffee_shop/constants/string_manger.dart';
-import 'package:coffee_shop/enums/localization_enum.dart';
-import 'package:coffee_shop/router/router.dart';
-import 'package:coffee_shop/data/cubit/local_lang/localization_cubit.dart';
+import 'package:coffee_shop/core/constants/string_manger.dart';
+import 'package:coffee_shop/core/enums/localization_enum.dart';
+import 'package:coffee_shop/featrues/home_page/data/cubit/local_lang/localization_cubit.dart';
 import 'package:coffee_shop/l10n/app_localizations.dart';
+import 'package:coffee_shop/core/router/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
