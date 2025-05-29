@@ -14,3 +14,4 @@ The Coffee Shop app is a modern mobile application developed using Flutter and D
   - **MVVM:** The app follows the MVVM (Model-View-ViewModel) design pattern for code organization.
   - **Bloc:** Utilizes Cubit for effective state management.
   - **Auto Router:** Strong and type-safe navigation with clean routing structure.
+  - **localization:** The app supports multiple languages to provide a better experience for users from different regions.
