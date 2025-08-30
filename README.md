@@ -17,7 +17,7 @@ A Flutter-based mobile application designed to provide users with a seamless and
 
 **AutoRoute:** Utilizes AutoRoute for type-safe and declarative routing, simplifying navigation.
 
- **Localization:** Integrates multi-language support to deliver a tailored user experience across different regions.
+**Localization:** Integrates multi-language support to deliver a tailored user experience across different regions.
 
 ## 🔍 Key Features
 
