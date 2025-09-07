@@ -12,10 +12,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get locale => 'ar';
 
   @override
-  String get fallInLoveWithCoffeeInBlissfulDelight => 'تقع في حب القهوة في بهجة\n سعيدة';
+  String get fallInLoveWithCoffeeInBlissfulDelight =>
+      'تقع في حب القهوة في بهجة\n سعيدة';
 
   @override
-  String get welcomeToOurCozyCoffeeCornerwhereeverycupisADelightfulForYou => 'مرحبًا بك في ركن القهوة المريح لدينا، حيث يمثل \nكل كوب متعة بالنسبة لك';
+  String get welcomeToOurCozyCoffeeCornerwhereeverycupisADelightfulForYou =>
+      'مرحبًا بك في ركن القهوة المريح لدينا، حيث يمثل \nكل كوب متعة بالنسبة لك';
 
   @override
   String get getStarted => 'ابدأ';
@@ -27,7 +29,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get deepFoam => 'رغوة عميقة';
 
   @override
-  String get discirptionCaffeMocha => 'الأساس هو أن جرعة الإسبريسو ممزوجة بمسحوق أو شراب الشوكولاتة، يليها الحليب أو الكريمة. إنه نوع مختلف من اللاتيه، بمعنى أنه غالبًا ما يتكون من ثلثي قهوة الإسبريسو وثلثي الحليب المبخر';
+  String get discirptionCaffeMocha =>
+      'الأساس هو أن جرعة الإسبريسو ممزوجة بمسحوق أو شراب الشوكولاتة، يليها الحليب أو الكريمة. إنه نوع مختلف من اللاتيه، بمعنى أنه غالبًا ما يتكون من ثلثي قهوة الإسبريسو وثلثي الحليب المبخر';
 
   @override
   String get flatWhite => 'فلات وايت';
@@ -36,7 +39,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get espresso => 'إسبرسو';
 
   @override
-  String get discirptionFlatWhite => 'شوت اسبريسو. هذه الرغوة الدقيقة عبارة عن حليب مبخر مملوء بالهواء مما يخلق ملمسًا ناعمًا مخمليًا وطعمًا كريميًا';
+  String get discirptionFlatWhite =>
+      'شوت اسبريسو. هذه الرغوة الدقيقة عبارة عن حليب مبخر مملوء بالهواء مما يخلق ملمسًا ناعمًا مخمليًا وطعمًا كريميًا';
 
   @override
   String get mochaFusi => 'موكا فوسي';
@@ -45,7 +49,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get iceHot => 'ثلج/ساخن';
 
   @override
-  String get discirptionMochaFusi => 'ثلج مجروش ومسحوق فيوجن، مغطى بالكريمة ومسحوق الشوكولاتة';
+  String get discirptionMochaFusi =>
+      'ثلج مجروش ومسحوق فيوجن، مغطى بالكريمة ومسحوق الشوكولاتة';
 
   @override
   String get irishCoffee => 'القهوة الأيرلندية';
@@ -54,7 +59,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get popular => 'شائع';
 
   @override
-  String get discirptionIrishCoffee => 'يتكون من الويسكي الأيرلندي والقهوة الساخنة والسكر، والتي تم تقليبها وتغطيتها بالكريمة (أحيانًا المسكرات الكريمية). تُشرب القهوة من خلال الكريمة';
+  String get discirptionIrishCoffee =>
+      'يتكون من الويسكي الأيرلندي والقهوة الساخنة والسكر، والتي تم تقليبها وتغطيتها بالكريمة (أحيانًا المسكرات الكريمية). تُشرب القهوة من خلال الكريمة';
 
   @override
   String get affogato => 'أفوجاتو';
@@ -63,7 +69,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get creamy => 'دسم';
 
   @override
-  String get discirptionAffogato => 'إنها عبارة عن مغرفة كبيرة من آيس كريم الفانيليا مع جرعة إسبرسو ساخنة تُسكب فوقها. عندما يصبح الأفوجاتو جاهزًا للتقديم، يبدو الآيس كريم وكأنه قد غرق في القهوة';
+  String get discirptionAffogato =>
+      'إنها عبارة عن مغرفة كبيرة من آيس كريم الفانيليا مع جرعة إسبرسو ساخنة تُسكب فوقها. عندما يصبح الأفوجاتو جاهزًا للتقديم، يبدو الآيس كريم وكأنه قد غرق في القهوة';
 
   @override
   String get allCoffee => 'كل القهوة';

@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:coffee_shop/featrues/setting_page/presentation/view/setting_page.dart';
+import 'package:coffee_shop/featrues/presentation/setting_page/view/setting_page.dart';
 import 'package:flutter/material.dart';
 
-import '../../featrues/home_page/data/models/card_model.dart';
-import '../../featrues/details_page/presentation/view/details_page.dart';
-import '../../featrues/home_page/presentation/view/home_page.dart';
-import '../../featrues/nav_bar_page/presentation/view/nav_bar_page.dart';
-import '../../featrues/onboarding_page/presentation/view/onboarding_page.dart';
-import '../../featrues/splash_page/presentation/view/splash_page.dart';
+import '../../featrues/data/models/card_model.dart';
+import '../../featrues/presentation/details_page/view/details_page.dart';
+import '../../featrues/presentation/home_page/view/home_page.dart';
+import '../../featrues/presentation/nav_bar_page/nav_bar_page.dart';
+import '../../featrues/presentation/onboarding_page/onboarding_page.dart';
+import '../../featrues/presentation/splash_page/splash_page.dart';
 
 part 'router.gr.dart';
 
